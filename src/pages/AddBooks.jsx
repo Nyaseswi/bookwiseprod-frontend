@@ -17,7 +17,7 @@ const AddBooks = () => {
   const submit = async (e) =>{
     e.preventDefault();
     await axios 
-    .post('http://localhost:1000/api/v1/add', Data)
+    .post('https://walrus-app-dnd4q.ondigitalocean.app/api/v1/add', Data)
     .then((res) => alert(res.data.message));
     setData({
       name:'',

@@ -9,7 +9,7 @@ const Books = () => {
   useEffect(() => {
     const fetch = async () => {
       await axios 
-      .get('http://localhost:1000/api/v1/getBooks')
+      .get('https://walrus-app-dnd4q.ondigitalocean.app/api/v1/getBooks')
       .then((res) => setData(res.data.books));
     };
     fetch();
