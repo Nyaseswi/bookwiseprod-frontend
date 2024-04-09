@@ -1,44 +1,31 @@
-// Dashboard.js
-
 import React from 'react';
-import './Home.css';
+import { jwtDecode } from 'jwt-decode'; // Import jwtDecode as a named export
 
 const Dashboard = () => {
-    const books = [
-        { id: 1, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald' },
-        { id: 2, title: 'To Kill a Mockingbird', author: 'Harper Lee' },
-        { id: 3, title: '1984', author: 'George Orwell' },
-        { id: 4, title: 'Harry Potter and the Sorcerer\'s Stone', author: 'J.K. Rowling' },
-        { id: 5, title: 'The Hobbit', author: 'J.R.R. Tolkien' },
-        { id: 6, title: 'The Catcher in the Rye', author: 'J.D. Salinger' },
-        // Add more books as needed
-      ];
-    
-      return (
-        <div className="dashboard-container">
-          <h1>Book Dashboard</h1>
-          <p>Add more books as needed</p>
-          <table className="book-table">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Title</th>
-                <th>Author</th>
-              </tr>
-            </thead>
-            <tbody>
-              {books.map((book) => (
-                <tr key={book.id}>
-                  <td>{book.id}</td>
-                  <td>{book.title}</td>
-                  <td>{book.author}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+  const token = localStorage.getItem('token');
+  const decodedToken = jwtDecode(token); // Use jwtDecode function
+  const { email, role } = decodedToken;
+
+  // Extracting user name from email
+  const userName = email.split('@')[0];
+
+  return (
+    <div className="bg-dark" style={{ minHeight: '90vh', backgroundImage: `url('https://shorturl.at/osBKM')`, height: '30vh', backgroundRepeat:'no-repeat' }}>
+      <div className="d-flex justify-content-end align-items-end py-3">
+        <div className='profileCard'>
+          <p>
+            Name: {userName}
+          </p>
+          <p>
+            Email: {email}
+          </p>
+          <p>
+            Role: {role}
+          </p>
         </div>
-      );
-    };
-    
-    export default Dashboard;
-    
+      </div>
+    </div>
+  );
+}
+
+export default Dashboard;

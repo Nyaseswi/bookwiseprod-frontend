@@ -11,3 +11,23 @@
     color: white;
     font-size: 20px;
 }
+/* profile styles */
+.profileCard {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    background-color:white;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .profileCard p {
+    margin: 10px 0;
+  }
+  
+  .profileCard span {
+    font-weight: bold;
+  }
+  

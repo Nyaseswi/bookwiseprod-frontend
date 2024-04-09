@@ -14,13 +14,21 @@
 /* register page styles */
 /* Home.css */
 
+.login-container {
+  display: flex;
+  justify-content: center;
+}
+
 .login-form {
-    max-width: 400px;
+    max-width: 500px;
+    width: 50%;
+    height: 400px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #f4f4f4;
+    align-self: center;
   }
   
   .login-form h2 {
@@ -39,14 +47,15 @@
     padding: 8px;
     margin-bottom: 16px;
     box-sizing: border-box;
+    border-radius: 8px;
   }
   
   button {
-    background-color: #4caf50;
+    background-color: #011402;
     color: #fff;
     padding: 10px 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
   }
   
@@ -55,3 +64,25 @@
   }
   /* dashboard styles */
   
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+
+  .background-container {
+    background-image: url('/public/registration_image.jpeg'); /* Adjust the path to your image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full height of the viewport */
+    width: 100%; /* Full width of the viewport */
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+    height: 30%;
+  }
+    

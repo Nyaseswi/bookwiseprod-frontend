@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom' 
 
 const Home = () => {
   return (
@@ -8,8 +8,8 @@ const Home = () => {
     <div className='row container'>
         <div className='col-lg-6 d-flex justify-content-center align-items-start flex-column' style={{height:'90vh'}}>
             <h2 style={{fontSize:"70px"}}>Book Store For You</h2>
-            <p style={{color:"sliver"}}> checkout the books from here click on view... </p>
-            <Link to='/books' className='viewBook my-3'>View Books</Link>
+            <p style={{color:"sliver"}}> checkout your favorite books. </p>
+            <Link to='/register' className='viewBook my-3'>Login? Click here</Link>
         
         </div>
         <div className='col-lg-6 d-flex justify-content-center align-items-end flex-column'style={{height:'90vh'}}> 
