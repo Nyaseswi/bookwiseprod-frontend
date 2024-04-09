@@ -75,9 +75,11 @@ const BooksSectionWithUserRole = ({ data }) => {
       const decoded = jwtDecode(token);
       setUserRole(decoded.role);
       setIsAuthenticated(true); // Set isAuthenticated to true
-
+      if (!data || data.length === 0) {
+        fetchBooksData(); // Call fetchBooksData only if initial data is empty
+      }
     }
-  }, [isAuthenticated]);
+  }, [data,isAuthenticated, setIsAuthenticated]);
 
   const fetchBooksData = async () => {
     try {
@@ -121,7 +123,7 @@ const BooksSectionWithUserRole = ({ data }) => {
           toast.success('book deleted successfully.');
           navigate("/books")
           window.location.reload();
-          // setIsAuthenticated(true);
+          setIsAuthenticated(true);
         } else {
           console.error('Failed to delete book');
           setLoading(false);
