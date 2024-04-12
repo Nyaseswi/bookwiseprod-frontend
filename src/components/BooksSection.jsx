@@ -83,7 +83,7 @@ const BooksSectionWithUserRole = ({ data }) => {
 
   const fetchBooksData = async () => {
     try {
-      const response = await fetch('http://15.206.91.234:8085/api/v1/getBooks');
+      const response = await fetch('https://bookwse.online/api/v1/getBooks');
       if (response.ok) {
         const data = await response.json();
         setBooksData(data); 
@@ -116,7 +116,7 @@ const BooksSectionWithUserRole = ({ data }) => {
 
       if (confirmation) {
         toast.dismiss();
-        const response = await fetch(`http://15.206.91.234:8085/api/v1/deleteBook/${id}`, {
+        const response = await fetch(`https://bookwse.online/api/v1/deleteBook/${id}`, {
           method: 'DELETE',
         });
         if (response.ok) {

@@ -21,7 +21,7 @@ const AddBooks = () => {
   const submit = async (e) =>{
     e.preventDefault();
     await axios 
-    .post('http://15.206.91.234:8085/api/v1/add', Data, {
+    .post('https://bookwse.online/api/v1/add', Data, {
       headers: {
         Authorization: `Bearer ${token}`
       }

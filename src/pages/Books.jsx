@@ -100,7 +100,7 @@ const Books = () => {
         //   throw new Error('JWT token not found');
         // }
 
-        const response = await axios.get('http://15.206.91.234:8085/api/users/userDetails', {
+        const response = await axios.get('https://bookwse.online/api/users/userDetails', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -130,7 +130,7 @@ const Books = () => {
 
   const fetchBooks = async () => {
     try {
-      const response = await axios.get('http://15.206.91.234:8085/api/v1/getBooks');
+      const response = await axios.get('https://bookwse.online/api/v1/getBooks');
       setBooks(response.data.books);
       setLoading(false);
     } catch (error) {

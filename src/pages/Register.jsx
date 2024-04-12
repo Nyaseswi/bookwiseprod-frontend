@@ -43,7 +43,7 @@ const Register = () => {
     if (formData.email.trim() && formData.password.trim() && !emailError) {
       try {
         const { data } = await axios.post(
-          'http://15.206.91.234:8085/api/users/register',
+          'https://bookwse.online/api/users/register',
           formData,
           {
             headers: {
@@ -100,7 +100,7 @@ const Register = () => {
     if (formData.email.trim() && formData.password.trim() && formData.role && !emailError) {
       try {
         const { data } = await axios.post(
-          'http://15.206.91.234:8085/api/users/login',
+          'https://bookwse.online/api/users/login',
           formData,
           {
             headers: {
